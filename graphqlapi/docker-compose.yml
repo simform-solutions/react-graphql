@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    build: ./DBService
+    ports:
+      - '3306:3306' # expose ports - HOST:CONTAINER
+  users:
+    build: .
+    depends_on:
+      - "db"
+    command: ["./wait-for-it.sh", "db:3306", "-t", "60", "--", "npm", "start"]
+    links:
+      - db
+    ports:
+      - '3001:3001' # expose ports - HOST:CONTAINER
+
+
+
+
