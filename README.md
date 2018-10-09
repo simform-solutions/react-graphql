@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It was developed as a technical challenge.
 
 
-## Sending Feedback
+## How To Run
 
 #### Run GraphQL API Server
 
